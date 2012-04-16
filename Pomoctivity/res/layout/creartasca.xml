@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"
+        android:ems="10"
+        android:hint="@string/task_description"
+        android:singleLine="false" />
+    <SeekBar
+        android:id="@+id/pomodoroBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_alignRight="@+id/editText1"
+        android:layout_below="@+id/editText1"
+        android:layout_marginTop="84dp" />
+    <TextView
+        android:id="@+id/numberOfPomodoros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pomodoroBar"
+        android:layout_below="@+id/editText1"
+        android:layout_marginTop="40dp"
+        android:text="0 Pomodoros"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pomodoroBar"
+        android:layout_alignRight="@+id/pomodoroBar"
+        android:layout_below="@+id/pomodoroBar"
+        android:layout_marginTop="69dp"
+        android:onClick="createTask"
+        android:text="Create task" />
+    <TextView
+        android:id="@+id/task_created_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="Task successfully created!"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+</RelativeLayout>

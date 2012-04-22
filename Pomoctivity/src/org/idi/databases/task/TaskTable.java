@@ -10,6 +10,7 @@ public class TaskTable {
             "create table tasks (_id integer primary key autoincrement," +
             "name text not null," +
             "remaining_pomodoros integer not null," +
+            "task_order integer," +
             "finished boolean not null);";
     
     public static void onCreate(SQLiteDatabase database) {

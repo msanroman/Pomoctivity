@@ -2,47 +2,85 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" >
-    <TableRow 
-        android:id="@+id/tableRow1" 
-        android:layout_width="wrap_content" 
-        android:layout_height="match_parent" 
-        android:visibility="visible"
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="8px"
         android:layout_marginTop="5px"
-        android:layout_marginBottom="8px" >
-        
+        android:visibility="visible" >
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" >
+
         <TextView
             android:id="@+id/taskId"
-            android:visibility="invisible"
-            android:layout_marginTop="6px"
-            android:lines="1"
-        />     
-           
-        <TextView
-            android:id="@+id/taskName"
-			android:layout_width="72dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6px"
-            android:lines="1"
-            android:text="@+id/TextView01"
-            android:textSize="30px" />
+            android:text="id"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/taskOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6px"
+            android:text="id" />
+<!--             android:visibility="gone" /> -->
+
+
+            <TextView
+                android:id="@+id/taskName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@+id/TextView01"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
         <TextView
             android:id="@+id/taskRemainingPomodoros"
-            android:layout_width="72dp"
+            android:layout_width="25dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6px"
-            android:layout_marginLeft="130px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
             android:lines="1"
-            android:text="@+id/TextView01"
-            android:textSize="30px" />
-<!--         <TextView  -->
-<!--             android:id="@+id/taskTotalPomodoros"  -->
-<!--             android:layout_width="fill_parent"  -->
-<!--             android:layout_height="wrap_content"  -->
-<!--             android:layout_marginTop="6px"  -->
-<!--             android:layout_marginLeft="30px" -->
-<!--             android:lines="1" android:text="@+id/TextView01"  -->
-<!--             android:textSize="30px"/> -->
-    
+            android:text="10"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:src="@android:drawable/ic_menu_delete"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/orderKeys"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:src="@android:drawable/arrow_up_float" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:src="@android:drawable/arrow_down_float" />
+        </LinearLayout>
     </TableRow>
 
 </LinearLayout>

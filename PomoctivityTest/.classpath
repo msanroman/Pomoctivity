@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Pomoctivity"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/Pomoctivity"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="lib/robolectric-1.1-jar-with-dependencies.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files (x86)/Android/android-sdk/platforms/android-10/android.jar"/>

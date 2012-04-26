@@ -21,7 +21,7 @@ public class PomoctivityActivity extends Activity {
     
     public void llistarTasques(View button) {
         
-        Intent llistarTasques = new Intent(this, LlistarTasquesActivity.class);
+        Intent llistarTasques = new Intent(this, TaskTabActivity.class);
         startActivity(llistarTasques);
     }
 }

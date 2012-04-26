@@ -27,8 +27,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6px"
-            android:text="id" />
-<!--             android:visibility="gone" /> -->
+            android:text="id"
+			android:visibility="gone" />
 
 
             <TextView

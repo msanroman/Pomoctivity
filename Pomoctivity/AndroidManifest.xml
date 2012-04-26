@@ -8,14 +8,18 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
-            android:name=".PomoctivityActivity"
+            android:name="PomoctivityActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CrearTascaActivity"></activity>
-        <activity android:name=".LlistarTasquesActivity"></activity>
+        <activity android:name="CrearTascaActivity"></activity>
+        <activity android:name="TaskTabActivity"></activity>
+        <activity android:name="LlistarTasquesActivity"></activity>
+        <activity android:name="FinishedTasksActivity"></activity>
+        <activity android:name="TodoTasksActivity"></activity>
+        <activity android:name="PomodoroActivity"></activity>
     </application>
 </manifest>

@@ -1,6 +1,7 @@
 package org.idi.databases.task;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 
 import org.idi.model.Task;
 
@@ -71,6 +72,11 @@ public class TaskDatabase {
         SQLiteDatabase database = taskDatabaseHelper.getReadableDatabase();
         return database.query(DB_TABLE, new String[]{ ID, NAME, REMAINING_POMODOROS, ORDER }, null, null, null, null, "task_order, finished") ;
     }
+    
+    public ArrayList<Task> getAllTasks() {
+    	
+    	return getAllTasksWithWhere("");
+    }
 
     public Task getTaskWithId(long id) throws TaskNotFoundException {
 
@@ -88,6 +94,36 @@ public class TaskDatabase {
 		ContentValues taskValues = new ContentValues();
 		taskValues.put(ORDER, taskToOrder.getOrder());
 		database.update(DB_TABLE, taskValues, "_id = " + taskToOrder.getId(), null);
+	}
+
+	public void deleteTask(Integer taskId) {
+
+		SQLiteDatabase database = taskDatabaseHelper.getWritableDatabase();
+		database.delete(DB_TABLE, ID + "=" + taskId, null);
+		database.close();
+	}
+
+	public ArrayList<Task> getAllFinishedTasks() {
+		
+		return getAllTasksWithWhere("finished = 1");
+	}
+
+	public ArrayList<Task> getAllTodoTasks() {
+
+		return getAllTasksWithWhere("finished = 0");
+	}
+	
+	private ArrayList<Task> getAllTasksWithWhere(String where) {
+		
+		SQLiteDatabase database = taskDatabaseHelper.getReadableDatabase();
+    	Cursor c = database.query(DB_TABLE, new String[]{ ID, NAME, REMAINING_POMODOROS, ORDER }, where, null, null, null, "task_order, finished") ;
+    	ArrayList<Task> tasks = new ArrayList<Task>();
+    	while(c.moveToNext()) {
+    		Task task = new Task(c.getInt(0), c.getString(1), c.getInt(2), c.getInt(3));
+    		tasks.add(task);
+    	}
+    	database.close();
+    	return tasks;
 	}
     
 }

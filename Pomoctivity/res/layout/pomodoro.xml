@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/pomodoroButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="162dp"
+            android:text="Start pomodoro" />
+
+        <TextView
+            android:id="@+id/pomodoroText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="84dp"
+            android:text="X pomodori remaining for TASK_NAME"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ProgressBar
+            android:id="@+id/pomodoroProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="216dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pomodoroText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="71dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.09"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+</LinearLayout>
